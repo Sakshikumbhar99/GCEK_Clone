@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+    position: relative;
+    height: auto;
+    background-color: #b31b1b;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar .menu {
+    margin-left: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .navbar .menu li {
+    position: relative;
+    padding: 4px 10px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+  .navbar .menu li:hover{
+    background-color: rgb(191, 2, 2);
+    cursor: pointer;
+    border: 0.1px solid white;
+    border-style: dotted;
+}
+  .navbar .menu li a {
+    color: rgb(61, 61, 61);
+    text-decoration: none;
+  }
+  .navbar .menu li a:hover{
+    color: #fff;
+  }
+  
+  .navbar .submenu {
+    background-color: #fff;
+    display: grid;
+    z-index: 1000;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out; 
+  }
+  
+  .navbar .submenu li {
+    color: rgb(41, 39, 39);
+    opacity: 0.8;
+    font-weight: 400;
+    padding: 5px 10px;
+    list-style-type: none;
+    white-space: nowrap;
+    text-align: start;
+    background-color: #ffffff;
+  }
+  .menu-toggle {
+    display: none;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+  }
+  
+  @media (max-width: 900px) {
+    .navbar{
+      cursor: pointer;
+      display: grid;
+      justify-content: center;
+        position: relative;margin-top: 70px;
+        padding: 10px;
+        background-color:#a8d9dd;
+    }
+    .menu-toggle {
+      cursor: pointer;
+      display: block;
+      position: absolute;
+      background-color:#a8d9dd;
+      top: 0px;
+      padding-left: 10px;
+      color: #fff;
+      height: 40px;
+      width: 100%;
+    }
+    .navbar .menu {
+      cursor: pointer;
+      display: none;
+      flex-direction: column;
+      top: 0;
+      right: 50px;
+      background-color: #a8d9dd;
+      position: relative;
+      margin-top: 35px;
+      margin-bottom: 0px;
+      width: 100%;
+    }
+  
+    .navbar .menu.open {
+      display: flex;
+    }
+  
+    .navbar .menu li {
+      position: relative;
+      margin: 2px 0px;
+      background-color: navy;
+      margin-right: 0;
+      display: grid;
+      width: 100%;
+      cursor: pointer;
+    border: 0.1px solid white;
+    border-style: dotted;
+    }
+    .navbar .menu li a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+      }
+      
+    .navbar .submenu {
+      position: relative;
+      top: 0;
+      left: 0;
+      display: grid;
+    }
+  
+    .navbar .menu li .submenu {
+      margin-top: 0;
+    }
+  }
